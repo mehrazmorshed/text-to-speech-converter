@@ -4,7 +4,7 @@ let voices = [];
 
 let voiceSelect = document.querySelector("select");
 
-window.SpeechSynthesis.onvoiceschanged = () => {
+window.speechSynthesis.onvoiceschanged = () => {
 	voices = window.speechSynthesis.getVoices();
 	speech.voice = voices[0];
 
