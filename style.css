@@ -12,6 +12,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	color: #ffffff;
 }
 .hero h1 {
 	font-size: 48px;
@@ -21,4 +22,17 @@
 }
 .hero h1 span {
 	color: #ff2963;
+}
+textarea {
+	width: 600px;
+	height: 250px;
+	background: #403d84;
+	color: #ffffff;
+	font-size: 16px;
+	border: 0;
+	outline: 0;
+	padding: 20px;
+	border-radius: 10px;
+	resize: none;
+	margin-bottom: 30px;
 }
