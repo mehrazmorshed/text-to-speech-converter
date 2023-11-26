@@ -1,19 +1,19 @@
 let speech = new SpeechSynthesisUtterance();
 
-let voices = [];if
+let voices = [];
 
 let voiceSelect = document.querySelector("select");
 
 window.SpeechSynthesis.onvoiceschanged = () => {
-	voices = window.SpeechSynthesis.getVoices();
+	voices = window.speechSynthesis.getVoices();
 	speech.voice = voices[0];
 
-	voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)) )
+	voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)));
 };
 
 
 
 document.querySelector("button").addEventListener("click", () =>{
 	speech.text = document.querySelector("textarea").value;
-	window.SpeechSynthesis.speak(speech);
+	window.speechSynthesis.speak(speech);
 });
